@@ -1,1 +1,1 @@
-# COVID-19-Mortality-Risk-Prediction
+# Early-COVID-19-prediction-using-Complete-Blood-Count-CBC-Parameters 
