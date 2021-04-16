@@ -25,14 +25,14 @@
 		<!-- Result -->
 		<div class="results">
 			{% if prediction>0.5 %}
-				<h1>Prediction: <span class='danger'>High mortality risk ({{int(prediction*100)}}%)</span></h1>
+				<h1>Prediction: <span class='danger'>High mortality risk ({{parseInt(prediction*100)}}%)</span></h1>
 				<img class="gif" src="{{ url_for('static', filename='High.png') }}" alt="Diabetes Image">
                         {% elif prediction<=0.5 and prediction>0.05 %}
-				<h1>Prediction: <span class='danger'>Moderate mortality risk ({{int(prediction*100)}}%)</span></h1>
+				<h1>Prediction: <span class='danger'>Moderate mortality risk ({{parseInt(prediction*100)}}%)</span></h1>
 				<img class="gif" src="{{ url_for('static', filename='Moderate.png') }}" alt="Diabetes Image">
 			
 			{% elif prediction<=0.05 %}
-				<h1>Prediction: <span class='safe'>Low mortality risk ({{int(prediction*100)}}%)</span></h1>
+				<h1>Prediction: <span class='safe'>Low mortality risk ({{parseInt(prediction*100)}}%)</span></h1>
 				<img class="gif1" src="{{ url_for('static', filename='Safe.jpg') }}" alt="Not Diabetes Image">
 			{% endif %}
 		</div>
